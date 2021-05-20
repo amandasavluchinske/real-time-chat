@@ -1,14 +1,38 @@
-<!-- chat/templates/chat/index.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <title>Chat Rooms</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        #room-name-input {
+            max-width: 200px;
+        }
+        #room-name-submit {
+            border: none;
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+        #room-name-submit:hover {
+            cursor: pointer;
+            background-color: lightgrey;
+        }
+    </style>
 </head>
 <body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+    <div class="container">
+        What chat room would you like to enter?<br>
+        <input id="room-name-input" type="text" size="100"><br>
+        <input id="room-name-submit" type="button" value="Enter">
+    </div>
 
     <script>
         document.querySelector('#room-name-input').focus();
